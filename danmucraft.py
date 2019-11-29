@@ -254,6 +254,12 @@ d = getDictionary()
 # 获得点数的比例（一般为 1）
 scale = 1
 
+# 清除物品之于给予物品的点数倍率
+clear_item_scale = 5
+
+# 清除效果之于赋予效果的点数倍率
+clear_effect_scale = 2
+
 # 观众列表，观众投喂礼物后获得积分并进入此列表
 audience_list = []
 name_list = []
@@ -302,7 +308,7 @@ class MyBLiveClient(blivedm.BLiveClient):
                     command = goGive(string, num)
                 elif code == 3:
                     # clear item
-                    total_cost = cost*num*5
+                    total_cost = cost*num*clear_item_scale
                     command = goClear(string, num)
                 elif code == 4:
                     # give effect
@@ -310,7 +316,7 @@ class MyBLiveClient(blivedm.BLiveClient):
                     command = goEffectGive(string, param)
                 elif code == 5:
                     # clear effect
-                    total_cost = cost*2
+                    total_cost = cost*clear_effect_scale
                     command = goEffectClear(string)
                 elif code == 6:
                     # set time

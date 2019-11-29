@@ -161,7 +161,7 @@ def checkDanmu(danmu):
         if(length > 2):
             num = int(danmu.split()[2])
             if(num >= 16):
-                num = 8
+                num = 4
         else:
             num = 1
         danmaku = danmu.split()[1]
@@ -255,7 +255,7 @@ d = getDictionary()
 scale = 1
 
 # 清除物品之于给予物品的点数倍率
-clear_item_scale = 5
+clear_item_scale = 10
 
 # 清除效果之于赋予效果的点数倍率
 clear_effect_scale = 2

@@ -1038,9 +1038,9 @@ NPC npc 1000
 黄色染料 yellow_dye 100
 # 状态效果名 英文名 点数 (额外参数(效果时间/强度))
 速度 speed 3000 180
-缓慢 slowness 3000 180
+缓慢 slowness 3000 20
 急迫 haste 3000 180
-挖掘疲劳 mining_fatigue 3000 180
+挖掘疲劳 mining_fatigue 3000 20
 力量 strength 3000 180
 瞬间治疗 instant_health 3000 3
 # 瞬间伤害 instant_damage 30000 1
@@ -1055,7 +1055,7 @@ NPC npc 1000
 夜视 night_vision 3000 180
 饥饿 hunger 3000 30
 虚弱 weakness 3000 30
-中毒 poison 10000 10
+中毒 poison 10000 20
 凋零 wither 10000 30
 生命提升 health_boost 3000 180
 伤害吸收 absorption 3000 180

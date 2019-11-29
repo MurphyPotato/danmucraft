@@ -23,7 +23,7 @@ P.S. 现已支持【召唤 闪电苦力怕】的命令。
 ## 送 物品名称 (可选数量)
 发送【送 钻石剑 4】命令可将四把钻石剑放入主播的背包栏中。不指定数量则默认为 1；数量最大为 16。
 除了【附魔金苹果】每个消耗 500 点数以外，每件物品消耗 100 点数。
-所有支持的物品名称，请参阅 [Minecraft_Wiki:译名标准化 - 方块](https://minecraft-zh.gamepedia.com/index.php?title=Minecraft_Wiki:%E8%AF%91%E5%90%8D%E6%A0%87%E5%87%86%E5%8C%96&variant=zh#.E6.96.B9.E5.9D.97) 和 [Minecraft_Wiki:译名标准化 - 物品](https://minecraft-zh.gamepedia.com/index.php?title=Minecraft_Wiki:%E8%AF%91%E5%90%8D%E6%A0%87%E5%87%86%E5%8C%96&variant=zh#.E7.89.A9.E5.93.81)
+所有支持的物品名称，请参阅 [Minecraft_Wiki:译名标准化 - 方块](https://minecraft-zh.gamepedia.com/index.php?title=Minecraft_Wiki:%E8%AF%91%E5%90%8D%E6%A0%87%E5%87%86%E5%8C%96&variant=zh#.E6.96.B9.E5.9D.97) 和 [Minecraft_Wiki:译名标准化 - 物品](https://minecraft-zh.gamepedia.com/index.php?title=Minecraft_Wiki:%E8%AF%91%E5%90%8D%E6%A0%87%E5%87%86%E5%8C%96&variant=zh#.E7.89.A9.E5.93.81)。
 
 ## 拿 物品名称 (可选数量)
 发送【拿 附魔金苹果 2】命令可从主播的背包栏中拿走两个附魔金苹果（没有则不会生效）。不指定数量则默认为 1；数量最大为 4。
@@ -36,6 +36,8 @@ P.S. 现已支持【召唤 闪电苦力怕】的命令。
 除【中毒】【凋零】两个稳定伤害效果消耗 10000 点数外，其余所有效果均消耗 3000 点数。
 
 【瞬间伤害】效果已被禁止使用。
+
+所有支持的效果名称，请参阅 [Minecraft_Wiki:译名标准化 - 状态效果](https://minecraft-zh.gamepedia.com/index.php?title=Minecraft_Wiki:%E8%AF%91%E5%90%8D%E6%A0%87%E5%87%86%E5%8C%96&variant=zh#.E7.8A.B6.E6.80.81.E6.95.88.E6.9E.9C) 。
 
 ## 清除 效果名称
 发送【清除 速度】命令可清除主播相应的效果。所有效果清除都是立刻生效，不管该效果的剩余时间还有多长。

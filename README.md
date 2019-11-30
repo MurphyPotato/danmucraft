@@ -69,9 +69,10 @@ P.S. 现已支持【召唤 闪电苦力怕】的命令。
 ## 服务器端的配置
 关于如何架设自己的 Minecraft 服务器，请参阅 [Minecraft_Wiki:教程/架设服务器](https://minecraft-zh.gamepedia.com/index.php?title=%E6%95%99%E7%A8%8B/%E6%9E%B6%E8%AE%BE%E6%9C%8D%E5%8A%A1%E5%99%A8&variant=zh)
 
-你的 Minecraft 服务器运行在名为 server 的 screen session 中，具体操作方式为（Linux 系统为例）：
+你的 Minecraft 服务器必须运行在名为 server 的 screen session 中，具体操作方式为：
 * `$ screen -S server`
 * `$ java -Xms1024M -Xmx2048M -jar minecraft_server.jar nogui`
+
 待 Minecraft 服务器在 screen 内顺利运行后，服务器端的设置就算完成，现在你应该能进入到自己刚开设的 Minecraft 服务器中。
 
 ## Python 脚本的配置
@@ -86,17 +87,20 @@ P.S. 现已支持【召唤 闪电苦力怕】的命令。
 * `clear_effect_scale`：清除效果之于赋予效果的点数倍率；
 * `bosses_list`：初始化 Boss 列表，方便继承上次直播的数据。
 
+配置完成后，使用 `python danmucrafy.py` 运行该脚本。
+在运行过程中，`bosses.txt` 和 `log.txt` 两个文件会实时更新，可将文本中的信息展示在 OBS 中提高互动效果。
+
 ## 命令及消耗点数的配置
 `dictionary.txt` 文件中包含了所有可召唤/给予的怪物/物品，其基本格式为：
 实体/物品名 英文名 点数 (额外参数)
 只有 `dictionary.txt` 存在的怪物/物品才可以被弹幕命令调用。若想要禁止某个物品被调用，可以使用 `# ` 将对应的行注释掉。
 要修改某个怪物/物品的消耗点数，修改文件中对应的行即可。
 
-## 关于 Probe
+# 关于 Probe
 一个什么内容（游戏、音乐、直播）都做的创作者：
 * [Bilibili 主页](https://space.bilibili.com/488744)
 * [Bilibili 直播间](https://live.bilibili.com/16670)
 * [Youtube 频道](https://www.youtube.com/channel/UCb-z8x0TD6cPtGkFLlUi4Sw)
 * [网易云音乐](https://music.163.com/user/home?id=50587279)
 
-欢迎大家关注 _(:з」∠)_
+欢迎大家关注 \_(:з」∠)\_

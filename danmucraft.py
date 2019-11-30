@@ -3,11 +3,14 @@ import os
 import asyncio
 import blivedm
 
-# 在这里填入房间号
+# 【修改】在这里填入直播间的房间号
 room_id = 16670
 
-# 需要用到的命令，请根据自己的服务器情况修改
-ssh_screen = "ssh -i ~/.ssh/minecraft minecraft@34.82.0.93 'screen -S server -p 0 -X stuff "
+# 【修改】私钥地址及服务器ip地址
+private_key = "~/.ssh/minecraft"
+server_address = "username@server_ip_address"
+
+ssh_screen = f"ssh -i {private_key} {server_address} 'screen -S server -p 0 -X stuff "
 quote_left = '"'
 quote_right = '''^M"'
 '''
@@ -248,25 +251,25 @@ def updateBosses():
             boss.printToFile(f)
 
 
-# 中英文对照表
-d = getDictionary()
-
-# 获得点数的比例（一般为 1）
+# 【可修改】获得点数的比例（一般为 1）
 scale = 1
 
-# 清除物品之于给予物品的点数倍率
+# 【可修改】清除物品之于给予物品的点数倍率
 clear_item_scale = 10
 
-# 清除效果之于赋予效果的点数倍率
+# 【可修改】清除效果之于赋予效果的点数倍率
 clear_effect_scale = 2
+
+# 【可修改】初始化 Boss 列表，方便继承上次直播的数据
+bosses_list = [Bosses("ender_dragon", 528900), Bosses(
+    "wither", 8300), Bosses("elder_guardian", 400)]
 
 # 观众列表，观众投喂礼物后获得积分并进入此列表
 audience_list = []
 name_list = []
 
-# 初始化 boss 列表，方便继承上次直播的数据
-bosses_list = [Bosses("ender_dragon", 528900), Bosses(
-    "wither", 8300), Bosses("elder_guardian", 400)]
+# 中英文对照表
+d = getDictionary()
 
 
 class MyBLiveClient(blivedm.BLiveClient):

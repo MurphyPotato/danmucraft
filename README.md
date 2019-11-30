@@ -12,7 +12,7 @@ P.S. 现已支持【召唤 闪电苦力怕】的命令。
 * 中立怪物（如：鸡）——几乎没有威胁，消耗 1000 点数；
 * 敌对怪物（如：苦力怕）——威胁度较小，消耗 2000 点数；
 * 精英怪物（如：唤魔者）——威胁度较高，消耗 10000 点数；
-* Boss怪物（如：凋灵）——威胁度极高，召唤一次需消耗大量点数，当可群体召唤（见下）。
+* Boss怪物（如：凋灵）——威胁度极高，召唤一次需消耗大量点数，但可群体召唤（见下）。
 
 【召唤 TNT】已经被禁止使用。
 
@@ -62,4 +62,41 @@ P.S. 现已支持【召唤 闪电苦力怕】的命令。
 
 # 插件的安装及使用
 
-（待写......）
+为了使用 Danmucraft 插件，你必须：
+* 会开设自己的 Minecraft 服务器（在命令行中运行）
+* 安装 Python 3
+
+## 服务器端的配置
+关于如何架设自己的 Minecraft 服务器，请参阅 [Minecraft_Wiki:教程/架设服务器](https://minecraft-zh.gamepedia.com/index.php?title=%E6%95%99%E7%A8%8B/%E6%9E%B6%E8%AE%BE%E6%9C%8D%E5%8A%A1%E5%99%A8&variant=zh)
+
+你的 Minecraft 服务器运行在名为 server 的 screen session 中，具体操作方式为（Linux 系统为例）：
+* `$ screen -S server`
+* `$ java -Xms1024M -Xmx2048M -jar minecraft_server.jar nogui`
+待 Minecraft 服务器在 screen 内顺利运行后，服务器端的设置就算完成，现在你应该能进入到自己刚开设的 Minecraft 服务器中。
+
+## Python 脚本的配置
+首先使用 `pip install asyncio` 安装运行所需的库。随后用文本编辑器打开 `danmucraft.py`，必须修改的参数如下：
+* `room_id`：直播间房号；
+* `private_key`：使用 `ssh` 远程登录服务器所需的私钥存放地址；
+* `server_address`：格式为 `username@server_ip_address`，用于登录到服务器。
+
+可选修改的参数如下：
+* `scale`：瓜子兑点数的倍率；
+* `clear_item_scale`：清除物品之于给予物品的点数倍率；
+* `clear_effect_scale`：清除效果之于赋予效果的点数倍率；
+* `bosses_list`：初始化 Boss 列表，方便继承上次直播的数据。
+
+## 命令及消耗点数的配置
+`dictionary.txt` 文件中包含了所有可召唤/给予的怪物/物品，其基本格式为：
+实体/物品名 英文名 点数 (额外参数)
+只有 `dictionary.txt` 存在的怪物/物品才可以被弹幕命令调用。若想要禁止某个物品被调用，可以使用 `# ` 将对应的行注释掉。
+要修改某个怪物/物品的消耗点数，修改文件中对应的行即可。
+
+## 关于 Probe
+一个什么内容（游戏、音乐、直播）都做的创作者：
+* [Bilibili 主页](https://space.bilibili.com/488744)
+* [Bilibili 直播间](https://live.bilibili.com/16670)
+* [Youtube 频道](https://www.youtube.com/channel/UCb-z8x0TD6cPtGkFLlUi4Sw)
+* [网易云音乐](https://music.163.com/user/home?id=50587279)
+
+欢迎大家关注 _(:з」∠)_
